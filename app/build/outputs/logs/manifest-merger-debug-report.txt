@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/4e6ea329e6510181f5eb344492532adc/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/280c30ae791a0653391f01936fd86c88/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/80be9e5ce075948c8ca2b8a9645b83ce/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/59655bb919df5a392094fc527a87b854/AndroidManifest.xml:17:1-22:12
@@ -16,57 +17,69 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/tr
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c53396de036bb72b474e15d5969bd069/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/24a94a4616c56e41e0a55ffd7e074657/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7eaa3d10c7dd1a541849a64c725d964c/AndroidManifest.xml:17:1-22:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:3:11-41
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-21:12
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:7:5-9:37
+	android:maxSdkVersion
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:9:9-35
+	android:name
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:8:9-65
 application
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:5:5-19:19
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:11:5-25:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/80be9e5ce075948c8ca2b8a9645b83ce/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/80be9e5ce075948c8ca2b8a9645b83ce/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:11:9-40
-activity#org.iii.iii_more_bot.MainActivity
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:12:9-18:20
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:17:9-40
+activity#org.iii.bot.MainActivity
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:18:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:14:17-68
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:20:17-68
 	android:name
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:16:17-76
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:22:17-76
 	android:name
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:22:27-74
 uses-sdk
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
+MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/4e6ea329e6510181f5eb344492532adc/AndroidManifest.xml:7:5-9:41
+MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/4e6ea329e6510181f5eb344492532adc/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/280c30ae791a0653391f01936fd86c88/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/280c30ae791a0653391f01936fd86c88/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/80be9e5ce075948c8ca2b8a9645b83ce/AndroidManifest.xml:5:5-7:41
