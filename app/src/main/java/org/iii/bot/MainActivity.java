@@ -20,23 +20,33 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import org.iii.iii_more_bot.R;
+import org.iii.module.Utility;
 import org.iii.more.common.Logs;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileInputStream;
 
 public class MainActivity extends AppCompatActivity
 {
+    private RobotHead robotHead = null;
     private final int ID_CALLBACK_READ_EXTERNAL_STORAGE = 1000;
     private final String SCENARIO_FILE_NAME = "/more/more_bot.txt";
+    private ScenarioHandler scenarioHandler = null;
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Utility.fullScreenNoBar(this);
+        robotHead = new RobotHead(this);
+        setContentView(robotHead);
+        scenarioHandler = new ScenarioHandler(this);
+        scenarioHandler.setViewGroup(robotHead);
         
         //======= Run Time Permission =========//
         // Android6.0以上的版本，必須讓使用者自行勾選是否開放這些權限
@@ -104,6 +114,10 @@ public class MainActivity extends AppCompatActivity
             }
             fstream.close();
             Logs.showTrace("[MainActivity] loadScenario Context: " + sbuffer.toString());
+            if (0 < sbuffer.length())
+            {
+                scenarioHandler.init(sbuffer.toString());
+            }
         }
         catch (Exception e)
         {
