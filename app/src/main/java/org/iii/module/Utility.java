@@ -11,6 +11,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.io.File;
+
 
 public abstract class Utility
 {
@@ -64,6 +66,11 @@ public abstract class Utility
     public static void loadImage(Context context, int nResId, ImageView imageView)
     {
         Glide.with(context).load(nResId).apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE)).into(imageView);
+    }
+    
+    public static void loadImage(Context context, File fPath, ImageView imageView)
+    {
+        Glide.with(context).load(fPath).apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE)).into(imageView);
     }
     
 }

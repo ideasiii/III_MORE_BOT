@@ -19,13 +19,12 @@ import static org.iii.bot.ScenarioData.ENUM_OBJECT.*;
  */
 public class ScenarioHandler
 {
-    ViewGroup theViewGroup = null;
+    private ViewGroup theViewGroup = null;
     private Activity theActivity = null;
-    private JSONObject jsonScenario = null;
     public static SparseArray<ScenarioData> Scenarios = new SparseArray<ScenarioData>();
-    public static SparseArray<ObjectTemplate<ImageObject>> ObjectTemps = new SparseArray<>();
+    private static SparseArray<ObjectTemplate<ImageObject>> ObjectTemps = new SparseArray<>();
     
-    public ScenarioHandler(Activity activity)
+    ScenarioHandler(Activity activity)
     {
         theActivity = activity;
     }
@@ -39,7 +38,7 @@ public class ScenarioHandler
     {
         try
         {
-            jsonScenario = new JSONObject(strScenario);
+            JSONObject jsonScenario = new JSONObject(strScenario);
             if (!jsonScenario.isNull("scenarios") && !jsonScenario.isNull("stages"))
             {
                 Logs.showTrace("[ScenarioHandler] init Scenario: " + jsonScenario.toString());
@@ -99,7 +98,7 @@ public class ScenarioHandler
                 {
                     ObjectTemps.get(nId).setObject(new ImageObject(theActivity));
                     ObjectTemps.get(nId).setViewGroup(theViewGroup);
-                    ObjectTemps.get(nId).create();
+                    ObjectTemps.get(nId).create(jObject);
                 }
                 Logs.showTrace("[ScenarioHandler] createObject ImageObject");
                 break;

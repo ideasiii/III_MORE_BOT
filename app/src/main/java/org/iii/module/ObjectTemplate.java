@@ -3,6 +3,8 @@ package org.iii.module;
 import android.app.Activity;
 import android.view.ViewGroup;
 
+import org.json.JSONObject;
+
 /**
  * Created by Jugo on 2018/4/23
  */
@@ -20,11 +22,11 @@ public class ObjectTemplate<T extends BaseObject>
         this.t = t;
     }
     
-    public void create()
+    public void create(JSONObject jsonConfig)
     {
         if (null != this.t)
         {
-            this.t.create();
+            this.t.create(jsonConfig);
         }
     }
     

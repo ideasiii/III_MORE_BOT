@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.renderscript.BaseObj;
 import android.view.ViewGroup;
 
+import org.json.JSONObject;
+
 /**
  * Created by Jugo on 2018/4/23
  */
@@ -21,7 +23,7 @@ public abstract class BaseObject
         theActivity = activity;
     }
     
-    protected abstract void create();
+    protected abstract void create(JSONObject jsonConfig);
     
     public void setViewGroup(ViewGroup viewGroup)
     {
