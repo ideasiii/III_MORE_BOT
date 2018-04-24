@@ -14,22 +14,19 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.RelativeLayout;
 
-import org.iii.iii_more_bot.R;
 import org.iii.module.Utility;
 import org.iii.more.common.Logs;
-import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -37,6 +34,8 @@ public class MainActivity extends AppCompatActivity
     private final int ID_CALLBACK_READ_EXTERNAL_STORAGE = 1000;
     private final String SCENARIO_FILE_NAME = "/more/more_bot.txt";
     private ScenarioHandler scenarioHandler = null;
+    private MainApplication mainApplication = null;
+    private String mstrScenario = null;
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -47,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(robotHead);
         scenarioHandler = new ScenarioHandler(this);
         scenarioHandler.setViewGroup(robotHead);
+        mainApplication = (MainApplication) this.getApplication();
         
         //======= Run Time Permission =========//
         // Android6.0以上的版本，必須讓使用者自行勾選是否開放這些權限
@@ -63,6 +63,13 @@ public class MainActivity extends AppCompatActivity
             }
         }
         
+    }
+    
+    @Override
+    protected void onDestroy()
+    {
+        mainApplication.release();
+        super.onDestroy();
     }
     
     @Override
@@ -103,21 +110,16 @@ public class MainActivity extends AppCompatActivity
     {
         try
         {
-            File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-            File myFile = new File(folder, SCENARIO_FILE_NAME);
-            FileInputStream fstream = new FileInputStream(myFile);
-            StringBuffer sbuffer = new StringBuffer();
-            int i;
-            while ((i = fstream.read()) != -1)
+            File myFile = new File(Utility.DownloadFold, SCENARIO_FILE_NAME);
+            InputStreamReader fstream = new InputStreamReader(new FileInputStream(myFile), "UTF-8");
+            BufferedReader sbuffer = new BufferedReader(fstream);
+            String line;
+            mstrScenario = "";
+            while ((line = sbuffer.readLine()) != null)
             {
-                sbuffer.append((char) i);
+                mstrScenario += line;
             }
-            fstream.close();
-            Logs.showTrace("[MainActivity] loadScenario Context: " + sbuffer.toString());
-            if (0 < sbuffer.length())
-            {
-                scenarioHandler.init(sbuffer.toString());
-            }
+            mainApplication.init(this);
         }
         catch (Exception e)
         {
@@ -132,5 +134,10 @@ public class MainActivity extends AppCompatActivity
                 }
             }).show();
         }
+    }
+    
+    public void startScenario()
+    {
+        scenarioHandler.init(mstrScenario);
     }
 }

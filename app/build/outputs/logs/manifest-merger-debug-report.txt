@@ -1,38 +1,38 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
-MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/4e6ea329e6510181f5eb344492532adc/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/280c30ae791a0653391f01936fd86c88/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/eefe78e4d4a25dac045c4cb4a60a74e1/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1764cceb53334d779de864a6d03da8f3/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/59655bb919df5a392094fc527a87b854/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0963fbee4b92f57710c8f0d6803406a3/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/30f239e85e5848135c6a8affcc693846/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9c595bd52e90ff452dcf3699ad97f316/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/b93da483fdd163f2573189c6c7e4554e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/b7bb93919686844a3bed02d6fcf553b6/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-compat:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/5ec3bbf09e7b5afd1312422ed192699f/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1dea4cfc4d38215eaf1bb0fdfb4ffa6/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c53396de036bb72b474e15d5969bd069/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/24a94a4616c56e41e0a55ffd7e074657/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7eaa3d10c7dd1a541849a64c725d964c/AndroidManifest.xml:17:1-22:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
+MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/9f4f5327282f502eac5ebd9170924581/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/33a3978d875a031e4af658bed06c96c0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/96863ed08515a9d4d561fda690be1619/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/415b888cb5e630b21c7a6a884ea17d07/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/7de69cd924b00630b98649b04266e8b1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/1b9e53ce71b985d42897ffdb8c5e65b1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c3c081c22d9276a5ca588333f9eb8914/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2af3e381856e41686b679c1598b1755b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/a929d8cd56c626868b2b43154fecea46/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-compat:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c8fe4d83cc9834bef62a3c8a9b266567/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/53bfda23d54ece95f1cb5311dca9ae43/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4b35efe2af5ccdf6a388ec679222e7c5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1f0901d77a77ccb86275e8722a38ac39/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c30b8194993ac377d2c24389a233971c/AndroidManifest.xml:17:1-22:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
 	package
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:3:11-41
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:3:11-32
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-27:12
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:1-29:12
 		INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:2:11-69
@@ -47,73 +47,77 @@ ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:7:5-9:37
 	android:name
 		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:8:9-65
 application
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:11:5-25:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/eefe78e4d4a25dac045c4cb4a60a74e1/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/eefe78e4d4a25dac045c4cb4a60a74e1/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1764cceb53334d779de864a6d03da8f3/AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1764cceb53334d779de864a6d03da8f3/AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/b7bb93919686844a3bed02d6fcf553b6/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/b7bb93919686844a3bed02d6fcf553b6/AndroidManifest.xml:9:5-20
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:11:5-27:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/33a3978d875a031e4af658bed06c96c0/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/33a3978d875a031e4af658bed06c96c0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/96863ed08515a9d4d561fda690be1619/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/96863ed08515a9d4d561fda690be1619/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/a929d8cd56c626868b2b43154fecea46/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/a929d8cd56c626868b2b43154fecea46/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:15:9-54
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:17:9-54
+	android:largeHeap
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:16:9-33
 	android:icon
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:19:9-40
+	android:name
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:12:9-40
 activity#org.iii.bot.MainActivity
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:18:9-24:20
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:20:9-26:20
 	android:name
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:18:19-58
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:20:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:20:17-68
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:22:17-68
 	android:name
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:22:17-76
+ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:24:17-76
 	android:name
-		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml:24:27-74
 uses-sdk
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
-MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/4e6ea329e6510181f5eb344492532adc/AndroidManifest.xml:7:5-9:41
-MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/4e6ea329e6510181f5eb344492532adc/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/280c30ae791a0653391f01936fd86c88/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/280c30ae791a0653391f01936fd86c88/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/eefe78e4d4a25dac045c4cb4a60a74e1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/eefe78e4d4a25dac045c4cb4a60a74e1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1764cceb53334d779de864a6d03da8f3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/1764cceb53334d779de864a6d03da8f3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/59655bb919df5a392094fc527a87b854/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/59655bb919df5a392094fc527a87b854/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0963fbee4b92f57710c8f0d6803406a3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/0963fbee4b92f57710c8f0d6803406a3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/30f239e85e5848135c6a8affcc693846/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/30f239e85e5848135c6a8affcc693846/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9c595bd52e90ff452dcf3699ad97f316/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9c595bd52e90ff452dcf3699ad97f316/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/b93da483fdd163f2573189c6c7e4554e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/b93da483fdd163f2573189c6c7e4554e/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/b7bb93919686844a3bed02d6fcf553b6/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/b7bb93919686844a3bed02d6fcf553b6/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-compat:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/5ec3bbf09e7b5afd1312422ed192699f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/5ec3bbf09e7b5afd1312422ed192699f/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1dea4cfc4d38215eaf1bb0fdfb4ffa6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/e1dea4cfc4d38215eaf1bb0fdfb4ffa6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c53396de036bb72b474e15d5969bd069/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/c53396de036bb72b474e15d5969bd069/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/24a94a4616c56e41e0a55ffd7e074657/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/24a94a4616c56e41e0a55ffd7e074657/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7eaa3d10c7dd1a541849a64c725d964c/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7eaa3d10c7dd1a541849a64c725d964c/AndroidManifest.xml:20:5-44
+MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/9f4f5327282f502eac5ebd9170924581/AndroidManifest.xml:7:5-9:41
+MERGED from [Common-debug.aar] /root/.gradle/caches/transforms-1/files-1.1/Common-debug.aar/9f4f5327282f502eac5ebd9170924581/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/33a3978d875a031e4af658bed06c96c0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/33a3978d875a031e4af658bed06c96c0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/96863ed08515a9d4d561fda690be1619/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/96863ed08515a9d4d561fda690be1619/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/415b888cb5e630b21c7a6a884ea17d07/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/415b888cb5e630b21c7a6a884ea17d07/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/7de69cd924b00630b98649b04266e8b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/7de69cd924b00630b98649b04266e8b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/1b9e53ce71b985d42897ffdb8c5e65b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/1b9e53ce71b985d42897ffdb8c5e65b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c3c081c22d9276a5ca588333f9eb8914/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/c3c081c22d9276a5ca588333f9eb8914/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2af3e381856e41686b679c1598b1755b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/2af3e381856e41686b679c1598b1755b/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/a929d8cd56c626868b2b43154fecea46/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /root/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/a929d8cd56c626868b2b43154fecea46/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-compat:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c8fe4d83cc9834bef62a3c8a9b266567/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c8fe4d83cc9834bef62a3c8a9b266567/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/53bfda23d54ece95f1cb5311dca9ae43/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/53bfda23d54ece95f1cb5311dca9ae43/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4b35efe2af5ccdf6a388ec679222e7c5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/4b35efe2af5ccdf6a388ec679222e7c5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1f0901d77a77ccb86275e8722a38ac39/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1f0901d77a77ccb86275e8722a38ac39/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c30b8194993ac377d2c24389a233971c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c30b8194993ac377d2c24389a233971c/AndroidManifest.xml:20:5-44
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 INJECTED from /github/III_MORE_BOT/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

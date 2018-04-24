@@ -36,14 +36,18 @@ public class ScenarioData
     
     public static final int ID_OBJECT_IMAGE_LOCAL = 1;
     public static final int ID_OBJECT_IMAGE_REMOTE = 2;
+    public static final int ID_OBJECT_BUTTON = 3;
+    public static final int ID_OBJECT_TTS = 4;
+    public static final int ID_OBJECT_SPEECH_NAVIGATION = 5;
+    
     
     public static enum ENUM_OBJECT
     {
         image_local(ID_OBJECT_IMAGE_LOCAL),
         image_remote(ID_OBJECT_IMAGE_REMOTE),
-        button(3),
-        tts(4),
-        speech(5);
+        button(ID_OBJECT_BUTTON),
+        tts(ID_OBJECT_TTS),
+        speech_navigation(ID_OBJECT_SPEECH_NAVIGATION);
         private int value;
         
         ENUM_OBJECT(int value)
@@ -55,5 +59,23 @@ public class ScenarioData
         {
             return this.value;
         }
+        
+        public String getName()
+        {
+            return this.name();
+        }
     }
+    
+    public static ENUM_OBJECT getObjectName(int objvalue)
+    {
+        for (ENUM_OBJECT aid : ENUM_OBJECT.values())
+        {
+            if (aid.value == objvalue)
+            {
+                return aid;
+            }
+        }
+        return null;
+    }
+    
 }

@@ -3,6 +3,7 @@ package org.iii.module;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Environment;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,6 +17,8 @@ import java.io.File;
 
 public abstract class Utility
 {
+    public static File DownloadFold = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+    
     public static float convertPixelToDp(float px, Context context)
     {
         Resources resources = context.getResources();

@@ -1,7 +1,6 @@
 package org.iii.module;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Environment;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -41,8 +40,7 @@ public class ImageObject extends BaseObject
             imageView.setY(y);
             
             String strFile = jsonConfig.getString("file");
-            File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-            File myFile = new File(folder, strFile);
+            File myFile = new File(Utility.DownloadFold, strFile);
             Logs.showTrace("[ImageObject] create File: " + myFile.toString());
             Utility.loadImage(theActivity, myFile, imageView);
         }

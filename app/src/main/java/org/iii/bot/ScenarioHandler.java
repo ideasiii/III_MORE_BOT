@@ -5,8 +5,10 @@ import android.util.SparseArray;
 import android.view.ViewGroup;
 
 import org.iii.bot.ScenarioData.ENUM_OBJECT;
+import org.iii.module.BaseObject;
 import org.iii.module.ImageObject;
 import org.iii.module.ObjectTemplate;
+import org.iii.module.TtsObject;
 import org.iii.more.common.Logs;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,7 +24,7 @@ public class ScenarioHandler
     private ViewGroup theViewGroup = null;
     private Activity theActivity = null;
     public static SparseArray<ScenarioData> Scenarios = new SparseArray<ScenarioData>();
-    private static SparseArray<ObjectTemplate<ImageObject>> ObjectTemps = new SparseArray<>();
+    private static SparseArray<ObjectTemplate> ObjectTemps = new SparseArray<>();
     
     ScenarioHandler(Activity activity)
     {
@@ -58,10 +60,12 @@ public class ScenarioHandler
         {
             int nStage = jobj.getInt("stages");
             int nType;
+            String strObjectName = null;
             JSONArray jaScenario = jobj.getJSONArray("scenarios");
             JSONObject jstage = null;
             JSONArray jaObjects = null;
             JSONObject jObject = null;
+            
             for (int i = 0; i < jaScenario.length(); ++i)
             {
                 jstage = jaScenario.getJSONObject(i);
@@ -71,12 +75,7 @@ public class ScenarioHandler
                 {
                     jObject = jaObjects.getJSONObject(j);
                     nType = jObject.getInt("type");
-                    switch (nType)
-                    {
-                        case ScenarioData.ID_OBJECT_IMAGE_LOCAL:
-                            createObject(image_local, jObject);
-                            break;
-                    }
+                    createObject(ScenarioData.getObjectName(nType), jObject);
                 }
             }
         }
@@ -88,28 +87,43 @@ public class ScenarioHandler
     
     private void createObject(ENUM_OBJECT enumObject, JSONObject jObject)
     {
-        int nId;
+        final int nId = ObjectTemps.size();
+        JSONObject jsonObject = null;
+        try
+        {
+            jsonObject = jObject.getJSONObject(enumObject.name());
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+            Logs.showError("[ScenarioHandler] createObject Exception: " + e.getMessage());
+        }
+        
         switch (enumObject)
         {
             case image_local:
-                nId = ObjectTemps.size();
                 ObjectTemps.put(nId, new ObjectTemplate<ImageObject>());
-                if (null != ObjectTemps.get(nId))
-                {
-                    ObjectTemps.get(nId).setObject(new ImageObject(theActivity));
-                    ObjectTemps.get(nId).setViewGroup(theViewGroup);
-                    ObjectTemps.get(nId).create(jObject);
-                }
-                Logs.showTrace("[ScenarioHandler] createObject ImageObject");
+                ObjectTemps.get(nId).setObject(new ImageObject(theActivity));
                 break;
             case image_remote:
                 break;
             case button:
                 break;
             case tts:
+                ObjectTemps.put(nId, new ObjectTemplate<TtsObject>());
+                ObjectTemps.get(nId).setObject(new TtsObject(theActivity));
                 break;
-            case speech:
+            case speech_navigation:
                 break;
+            default:
+                Logs.showError("[ScenarioHandler] createObject Over ENUM_OBJECT");
+                return;
+        }
+        
+        if (null != ObjectTemps.get(nId))
+        {
+            ObjectTemps.get(nId).setViewGroup(theViewGroup);
+            ObjectTemps.get(nId).create(jsonObject);
         }
     }
 }
