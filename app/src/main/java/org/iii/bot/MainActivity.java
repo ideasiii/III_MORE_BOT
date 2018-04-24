@@ -30,9 +30,7 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity
 {
-    private RobotHead robotHead = null;
     private final int ID_CALLBACK_READ_EXTERNAL_STORAGE = 1000;
-    private final String SCENARIO_FILE_NAME = "/more/more_bot.txt";
     private ScenarioHandler scenarioHandler = null;
     private MainApplication mainApplication = null;
     private String mstrScenario = null;
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         Utility.fullScreenNoBar(this);
-        robotHead = new RobotHead(this);
+        RobotHead robotHead = new RobotHead(this);
         setContentView(robotHead);
         scenarioHandler = new ScenarioHandler(this);
         scenarioHandler.setViewGroup(robotHead);
@@ -110,6 +108,7 @@ public class MainActivity extends AppCompatActivity
     {
         try
         {
+            String SCENARIO_FILE_NAME = "/more/more_bot.txt";
             File myFile = new File(Utility.DownloadFold, SCENARIO_FILE_NAME);
             InputStreamReader fstream = new InputStreamReader(new FileInputStream(myFile), "UTF-8");
             BufferedReader sbuffer = new BufferedReader(fstream);

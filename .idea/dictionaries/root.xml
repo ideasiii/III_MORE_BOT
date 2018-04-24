@@ -2,6 +2,7 @@
   <dictionary name="root">
     <words>
       <w>fstream</w>
+      <w>mstr</w>
       <w>sbuffer</w>
     </words>
   </dictionary>
