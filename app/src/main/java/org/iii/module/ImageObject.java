@@ -16,6 +16,8 @@ import java.io.File;
  */
 public class ImageObject extends BaseObject
 {
+    private ImageView imageView = null;
+    private String mstrImage = null;
     
     public ImageObject(Activity activity)
     {
@@ -26,7 +28,7 @@ public class ImageObject extends BaseObject
     protected void create(JSONObject jsonConfig)
     {
         Logs.showTrace("[ImageObject] create");
-        ImageView imageView = new ImageView(theActivity);
+        imageView = new ImageView(theActivity);
         
         try
         {
@@ -41,7 +43,8 @@ public class ImageObject extends BaseObject
             
             String strFile = jsonConfig.getString("file");
             File myFile = new File(Utility.DownloadFold, strFile);
-            Logs.showTrace("[ImageObject] create File: " + myFile.toString());
+            mstrImage = myFile.toString();
+            Logs.showTrace("[ImageObject] create File: " + mstrImage);
             Utility.loadImage(theActivity, myFile, imageView);
         }
         catch (JSONException e)
@@ -49,7 +52,18 @@ public class ImageObject extends BaseObject
             e.printStackTrace();
             Logs.showError("[ImageObject] create Exception: " + e.getMessage());
         }
-        
-        theViewGroup.addView(imageView);
+        Logs.showTrace("[ImageObject] class hashCode: " + this.hashCode());
+        //theViewGroup.addView(imageView);
+    }
+    
+    @Override
+    protected void run()
+    {
+        Logs.showTrace("[ImageObject] run " + mstrImage);
+        if (null != imageView)
+        {
+            theViewGroup.addView(imageView);
+            Logs.showTrace("[ImageObject] run " + mstrImage);
+        }
     }
 }

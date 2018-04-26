@@ -25,6 +25,8 @@ public abstract class BaseObject
     
     protected abstract void create(JSONObject jsonConfig);
     
+    protected abstract void run();
+    
     public void setViewGroup(ViewGroup viewGroup)
     {
         theViewGroup = viewGroup;

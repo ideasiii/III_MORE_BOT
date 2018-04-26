@@ -13,6 +13,7 @@ import org.json.JSONObject;
 public class TtsObject extends BaseObject
 {
     private MainApplication mainApplication = null;
+    private String mstrText = "";
     
     public TtsObject(Activity activity)
     {
@@ -25,13 +26,19 @@ public class TtsObject extends BaseObject
     {
         try
         {
-            String strText = jsonConfig.getString("text");
-            Logs.showTrace("[TtsObject] create TTS text: " + strText);
-            mainApplication.tts(strText, "111");
+            mstrText = jsonConfig.getString("text");
+            Logs.showTrace("[TtsObject] create TTS text: " + mstrText);
         }
         catch (JSONException e)
         {
             e.printStackTrace();
         }
+    }
+    
+    @Override
+    protected void run()
+    {
+        Logs.showTrace("[TtsObject] run TTS text: " + mstrText);
+        mainApplication.tts(mstrText, "111");
     }
 }

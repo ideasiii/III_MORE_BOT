@@ -35,4 +35,8 @@ public class ObjectTemplate<T extends BaseObject>
         this.t.setViewGroup(viewGroup);
     }
     
+    public void run()
+    {
+    
+    }
 }

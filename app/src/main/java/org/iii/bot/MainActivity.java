@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity
             {
                 mstrScenario += line;
             }
+            Logs.showTrace("[MainActivity] loadScenario: " + mstrScenario);
             mainApplication.init(this);
         }
         catch (Exception e)
@@ -137,6 +138,18 @@ public class MainActivity extends AppCompatActivity
     
     public void startScenario()
     {
+        Logs.showTrace("[MainActivity] startScenario");
+        if (null == mstrScenario)
+        {
+            loadScenario();
+        }
+        else
+        {
+            if (0 >= mstrScenario.length())
+            {
+                loadScenario();
+            }
+        }
         scenarioHandler.init(mstrScenario);
     }
 }
