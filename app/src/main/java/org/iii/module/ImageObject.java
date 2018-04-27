@@ -1,6 +1,8 @@
 package org.iii.module;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -36,15 +38,33 @@ public class ImageObject extends BaseObject
             y = jsonConfig.getInt("y");
             width = jsonConfig.getInt("w");
             height = jsonConfig.getInt("h");
+            if (-1 == width)
+            {
+                width = ViewGroup.LayoutParams.MATCH_PARENT;
+            }
+            if (-1 == height)
+            {
+                height = ViewGroup.LayoutParams.MATCH_PARENT;
+            }
+            
             ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(width, height);
             imageView.setLayoutParams(layoutParams);
             imageView.setX(x);
             imageView.setY(y);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             
             String strFile = jsonConfig.getString("file");
             File myFile = new File(Utility.DownloadFold, strFile);
             mstrImage = myFile.toString();
             Logs.showTrace("[ImageObject] create File: " + mstrImage);
+//            File imgFile = new File(mstrImage);
+//
+//            if (imgFile.exists())
+//            {
+//                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+//                imageView.setImageBitmap(myBitmap);
+//            }
+            
             Utility.loadImage(theActivity, myFile, imageView);
         }
         catch (JSONException e)

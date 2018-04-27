@@ -34,6 +34,12 @@ public class ScenarioData
         objects = new SparseArray<CObject>();
     }
     
+    public static final int ID_TTS_FINISH = 1000;
+    public static final int ID_SPEECH_FINISH = 2000;
+    
+    public static final int ID_NEXT_EVENT_TTS = 1;
+    public static final int ID_NEXT_EVENT_SPEECH = 2;
+    
     public static final int ID_OBJECT_IMAGE_LOCAL = 1;
     public static final int ID_OBJECT_IMAGE_REMOTE = 2;
     public static final int ID_OBJECT_BUTTON = 3;

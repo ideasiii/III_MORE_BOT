@@ -2,6 +2,7 @@ package org.iii.bot;
 
 import android.app.Activity;
 import android.app.Application;
+import android.speech.tts.UtteranceProgressListener;
 
 import org.iii.module.TtsHandler;
 import org.iii.more.common.Logs;
@@ -11,6 +12,22 @@ import org.iii.more.common.Logs;
  */
 public class MainApplication extends Application
 {
+    private static OnTtsStateListener ttsState = null;
+    
+    public static interface OnTtsStateListener
+    {
+        public void onState(int nState, String id);
+    }
+    
+    public void SetOnTtsStateListener(OnTtsStateListener listener)
+    {
+        if (null != listener)
+        {
+            ttsState = listener;
+            Logs.showTrace("[MainApplication] SetOnTtsStateListener");
+        }
+    }
+    
     private TtsHandler ttsHandler = null;
     
     public MainApplication()
@@ -33,10 +50,41 @@ public class MainApplication extends Application
             @Override
             public void OnStarted()
             {
+                ttsHandler.SetOnUtteranceProgressListener(new UtteranceProgressListener()
+                {
+                    @Override
+                    public void onStart(String s)
+                    {
+                        if (null != ttsState)
+                        {
+                            ttsState.onState(0, s);
+                        }
+                    }
+                    
+                    @Override
+                    public void onDone(String s)
+                    {
+                        if (null != ttsState)
+                        {
+                            Logs.showTrace("[MainApplication] TTS onDone");
+                            ttsState.onState(1, s);
+                        }
+                    }
+                    
+                    @Override
+                    public void onError(String s)
+                    {
+                        if (null != ttsState)
+                        {
+                            ttsState.onState(2, s);
+                        }
+                    }
+                });
                 activity.startScenario();
             }
         });
         ttsHandler.createTTS();
+        
     }
     
     public void release()
@@ -49,5 +97,4 @@ public class MainApplication extends Application
     {
         ttsHandler.speack(strText, strCallback);
     }
-    
 }

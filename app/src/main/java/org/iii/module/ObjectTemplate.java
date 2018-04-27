@@ -24,10 +24,7 @@ public class ObjectTemplate<T extends BaseObject>
     
     public void create(JSONObject jsonConfig)
     {
-        if (null != this.t)
-        {
-            this.t.create(jsonConfig);
-        }
+        this.t.create(jsonConfig);
     }
     
     public void setViewGroup(ViewGroup viewGroup)
@@ -37,6 +34,11 @@ public class ObjectTemplate<T extends BaseObject>
     
     public void run()
     {
+        this.t.run();
+    }
     
+    public boolean isValid()
+    {
+        return null != this.t;
     }
 }

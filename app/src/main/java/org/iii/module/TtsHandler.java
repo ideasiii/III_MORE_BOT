@@ -98,6 +98,7 @@ public class TtsHandler
         if (null != tts && bTtsValid[0])
         {
             tts.setOnUtteranceProgressListener(utteranceProgressListener);
+            Logs.showTrace("[TtsHandler] SetOnUtteranceProgressListener");
         }
     }
     

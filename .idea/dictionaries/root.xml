@@ -2,6 +2,8 @@
   <dictionary name="root">
     <words>
       <w>fstream</w>
+      <w>jroot</w>
+      <w>jscenario</w>
       <w>mstr</w>
       <w>sbuffer</w>
     </words>

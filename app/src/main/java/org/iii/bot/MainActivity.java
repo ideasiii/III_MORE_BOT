@@ -20,6 +20,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import org.iii.module.FileHandler;
 import org.iii.module.Utility;
 import org.iii.more.common.Logs;
 
@@ -108,17 +109,8 @@ public class MainActivity extends AppCompatActivity
     {
         try
         {
-            String SCENARIO_FILE_NAME = "/more/more_bot.txt";
-            File myFile = new File(Utility.DownloadFold, SCENARIO_FILE_NAME);
-            InputStreamReader fstream = new InputStreamReader(new FileInputStream(myFile), "UTF-8");
-            BufferedReader sbuffer = new BufferedReader(fstream);
-            String line;
-            mstrScenario = "";
-            while ((line = sbuffer.readLine()) != null)
-            {
-                mstrScenario += line;
-            }
-            Logs.showTrace("[MainActivity] loadScenario: " + mstrScenario);
+            FileHandler fileHandler = new FileHandler();
+            mstrScenario = fileHandler.readFile(Utility.DownloadFold, "/more/more_bot.txt");
             mainApplication.init(this);
         }
         catch (Exception e)
@@ -150,6 +142,21 @@ public class MainActivity extends AppCompatActivity
                 loadScenario();
             }
         }
-        scenarioHandler.init(mstrScenario);
+        
+        if (scenarioHandler.init(mstrScenario))
+        {
+            scenarioHandler.run();
+        }
+        else
+        {
+            new AlertDialog.Builder(MainActivity.this).setMessage("無敵鐵金剛初始化失敗了").setPositiveButton("OK", new DialogInterface.OnClickListener()
+            {
+                @Override
+                public void onClick(DialogInterface dialog, int which)
+                {
+                    finish();
+                }
+            }).show();
+        }
     }
 }

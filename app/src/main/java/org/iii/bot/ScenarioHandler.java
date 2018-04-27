@@ -1,10 +1,13 @@
 package org.iii.bot;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.os.Message;
 import android.util.SparseArray;
 import android.view.ViewGroup;
 
 import org.iii.bot.ScenarioData.ENUM_OBJECT;
+import org.iii.module.BaseObject;
 import org.iii.module.ImageObject;
 import org.iii.module.ObjectTemplate;
 import org.iii.module.TtsObject;
@@ -13,20 +16,34 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.os.Handler;
+
+import static org.iii.bot.ScenarioData.ID_NEXT_EVENT_SPEECH;
+import static org.iii.bot.ScenarioData.ID_NEXT_EVENT_TTS;
+import static org.iii.bot.ScenarioData.ID_SPEECH_FINISH;
+import static org.iii.bot.ScenarioData.ID_TTS_FINISH;
+
 /**
  * Created by Jugo on 2018/4/19
  */
 public class ScenarioHandler
 {
+    private SparseArray<JSONObject> jscenario;
     private int mnCurrentScenario = -1;
-    private ViewGroup theViewGroup = null;
-    private Activity theActivity = null;
+    private static ViewGroup theViewGroup = null;
+    private Activity theActivity;
+    private MainApplication theApp;
+    private final int MSG_GO_NEXT = 1;
+    
+    
     private static SparseArray<ObjectTemplate> ObjectTemps = new SparseArray<>();
     private static SparseArray<SparseArray<ObjectTemplate>> scenarios = new SparseArray<SparseArray<ObjectTemplate>>();
     
     ScenarioHandler(Activity activity)
     {
         theActivity = activity;
+        theApp = (MainApplication) theActivity.getApplication();
+        jscenario = new SparseArray<JSONObject>();
     }
     
     public void setViewGroup(ViewGroup viewGroup)
@@ -34,15 +51,26 @@ public class ScenarioHandler
         theViewGroup = viewGroup;
     }
     
-    public void init(String strScenario)
+    public boolean init(String strScenario)
     {
         try
         {
             JSONObject jsonScenario = new JSONObject(strScenario);
             if (!jsonScenario.isNull("scenarios"))
             {
-                Logs.showTrace("[ScenarioHandler] init Scenario: " + jsonScenario.toString());
-                parseScenarioJson(jsonScenario);
+                JSONArray jaScenarios = jsonScenario.getJSONArray("scenarios");
+                int nScenarioId = -1;
+                if (null != jaScenarios && 0 < jaScenarios.length())
+                {
+                    jscenario.clear();
+                    for (int i = 0; i < jaScenarios.length(); ++i)
+                    {
+                        nScenarioId = jaScenarios.getJSONObject(i).getInt("id");
+                        jscenario.put(nScenarioId, jaScenarios.getJSONObject(i));
+                        Logs.showTrace("[ScenarioHandler] init Scenario JSONObject: " + jscenario.get(nScenarioId).toString() + " id: " + nScenarioId);
+                    }
+                    return true;
+                }
             }
         }
         catch (JSONException e)
@@ -50,98 +78,138 @@ public class ScenarioHandler
             e.printStackTrace();
             Logs.showError("[ScenarioHandler] init Exception: " + e.getMessage());
         }
+        return false;
     }
     
-    private void parseScenarioJson(JSONObject jobj)
+    public void run()
     {
+        theApp.SetOnTtsStateListener(new MainApplication.OnTtsStateListener()
+        {
+            @Override
+            public void onState(int nState, String id)
+            {
+                switch (nState)
+                {
+                    case 0: // onStart
+                        break;
+                    case 1: // onDone
+                        theHandler.sendEmptyMessage(MSG_GO_NEXT);
+                        break;
+                    case 2: // onError
+                        break;
+                }
+            }
+        });
+        
+        // 垃圾程式一啟動 就先執行id = 1的設定喔!!
+        runScenario(1);
+    }
+    
+    private void runScenario(int id)
+    {
+        mnCurrentScenario = id;
+        JSONObject jroot = jscenario.get(id);
+        
+        // 初始物件列表囉
         try
         {
-            int nScenarioId = -1;
-            int nType;
-            String strObjectName = null;
-            JSONArray jaScenario = jobj.getJSONArray("scenarios");
-            JSONObject jstage = null;
-            JSONArray jaObjects = null;
+            JSONArray jaObjects = jroot.getJSONArray("objects");
             JSONObject jObject = null;
-            
-            for (int i = 0; i < jaScenario.length(); ++i)
+            for (int i = 0; i < jaObjects.length(); ++i)
             {
-                jstage = jaScenario.getJSONObject(i);
-                nScenarioId = jstage.getInt("id");
-                Logs.showTrace("[ScenarioHandler] parseScenarioJson id: " + nScenarioId);
-                jaObjects = jstage.getJSONArray("objects");
-                SparseArray<ObjectTemplate> ObjectTemps = new SparseArray<>();
-                for (int j = 0; j < jaObjects.length(); ++j)
-                {
-                    jObject = jaObjects.getJSONObject(j);
-                    nType = jObject.getInt("type");
-                    createObject(ScenarioData.getObjectName(nType), jObject, ObjectTemps);
-                }
-                scenarios.put(i, ObjectTemps);
-                Logs.showTrace("[ScenarioHandler] add scenario index: " + i);
+                jObject = jaObjects.getJSONObject(i);
+                createObject(jObject);
             }
-            runScenario(scenarios);
         }
         catch (JSONException e)
         {
             e.printStackTrace();
-            Logs.showError("[ScenarioHandler] parseScenarioJson Exception: " + e.getMessage());
+            Logs.showError("[ScenarioHandler] run Exception: " + e.getMessage());
         }
     }
     
-    private void createObject(ENUM_OBJECT enumObject, JSONObject jObject, SparseArray<ObjectTemplate> ObjectTemps)
+    private void createObject(JSONObject jObject)
     {
-        final int nId = ObjectTemps.size();
-        JSONObject jsonObject = null;
         try
         {
-            jsonObject = jObject.getJSONObject(enumObject.name());
+            ENUM_OBJECT enumObject = ScenarioData.getObjectName(jObject.getInt("type"));
+            JSONObject jsonObject = jObject.getJSONObject(enumObject.name());
+            ObjectTemplate<BaseObject> tobject = new ObjectTemplate<BaseObject>();
+            switch (enumObject)
+            {
+                case image_local:
+                    tobject.setObject(new ImageObject(theActivity));
+                    break;
+                case image_remote:
+                    break;
+                case button:
+                    break;
+                case tts:
+                    tobject.setObject(new TtsObject(theActivity));
+                    break;
+                case speech_navigation:
+                    break;
+                default:
+                    Logs.showError("[ScenarioHandler] createObject Over ENUM_OBJECT");
+                    return;
+            }
+            
+            if (tobject.isValid())
+            {
+                tobject.setViewGroup(theViewGroup);
+                tobject.create(jsonObject);
+                tobject.run();
+            }
         }
         catch (JSONException e)
         {
             e.printStackTrace();
             Logs.showError("[ScenarioHandler] createObject Exception: " + e.getMessage());
         }
-        
-        switch (enumObject)
-        {
-            case image_local:
-                ObjectTemps.put(nId, new ObjectTemplate<ImageObject>());
-                ObjectTemps.get(nId).setObject(new ImageObject(theActivity));
-                break;
-            case image_remote:
-                break;
-            case button:
-                break;
-            case tts:
-                ObjectTemps.put(nId, new ObjectTemplate<TtsObject>());
-                ObjectTemps.get(nId).setObject(new TtsObject(theActivity));
-                break;
-            case speech_navigation:
-                break;
-            default:
-                Logs.showError("[ScenarioHandler] createObject Over ENUM_OBJECT");
-                return;
-        }
-        
-        if (null != ObjectTemps.get(nId))
-        {
-            ObjectTemps.get(nId).setViewGroup(theViewGroup);
-            ObjectTemps.get(nId).create(jsonObject);
-            Logs.showTrace("[ScenarioHandler] createObject id: " + nId);
-        }
     }
     
-    private void runScenario(SparseArray<SparseArray<ObjectTemplate>> scenarios)
+    private void goNextScenario(int nEvent)
     {
-        Logs.showTrace("[ScenarioHandler] runScenario size: " + scenarios.size());
-        SparseArray<ObjectTemplate> ots = scenarios.get(0);
-        Logs.showTrace("[ScenarioHandler] ObjectTemplate size: " + ots.size());
-        for (int i = 0; i < ots.size(); ++i)
+        JSONObject jroot = jscenario.get(mnCurrentScenario);
+        int nNext_Event = -1;
+        int nNext_Id = -1;
+        
+        try
         {
-            Logs.showTrace("[ScenarioHandler] ObjectTemplate run: " + i + " hashcode" + ots.get(i).hashCode());
-            ots.get(i).run();
+            nNext_Event = jroot.getInt("next_event");
+            nNext_Id = jroot.getInt("next_id");
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+        
+        // Event come~
+        switch (nEvent)
+        {
+            case ID_TTS_FINISH:
+                if (nNext_Event == ID_NEXT_EVENT_TTS)
+                {
+                    runScenario(nNext_Id);
+                }
+                break;
+            case ID_SPEECH_FINISH:
+                break;
         }
     }
     
+    @SuppressLint("HandlerLeak")
+    private Handler theHandler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+            switch (msg.what)
+            {
+                case MSG_GO_NEXT:
+                    goNextScenario(ID_TTS_FINISH);
+                    break;
+            }
+        }
+    };
 }
