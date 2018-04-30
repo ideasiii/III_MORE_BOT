@@ -108,6 +108,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/github/III_MORE_BOT/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
@@ -348,6 +352,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/github/III_MORE_BOT/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/layout_abc_action_bar_up_container.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/layout/abc_action_bar_up_container.xml"
     },
@@ -368,12 +376,12 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c8fe4d83cc9834bef62a3c8a9b266567/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/layout_abc_search_dropdown_item_icons_2line.xml.flat",
@@ -558,6 +566,10 @@
     {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/github/III_MORE_BOT/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -1464,6 +1476,10 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/github/III_MORE_BOT/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/layout/select_dialog_singlechoice_material.xml"
     },
@@ -1530,6 +1546,10 @@
     {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8b184d44d2258b9edb37f574a966c914/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/github/III_MORE_BOT/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/github/III_MORE_BOT/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
