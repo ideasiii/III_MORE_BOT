@@ -29,7 +29,6 @@ import static org.iii.bot.ScenarioData.ID_TTS_FINISH;
 public class ScenarioHandler
 {
     private SparseArray<JSONObject> jscenario;
-    private SparseArray<JSONObject> jobjects;
     private int mnCurrentScenario = -1;
     private static ViewGroup theViewGroup = null;
     private Activity theActivity;
@@ -114,14 +113,9 @@ public class ScenarioHandler
         // 初始物件列表囉
         try
         {
-            JSONArray jaObjects = jroot.getJSONArray("objects");
-            JSONObject jObject;
-            int nId = -1;
-            for (int i = 0; i < jaObjects.length(); ++i)
+            for (int i = 0; i < jroot.getJSONArray("objects").length(); ++i)
             {
-                nId = jaObjects.getJSONObject(i).getInt("id");
-                jobjects.put(nId, jaObjects.getJSONObject(i));
-                //createObject(jObject);
+                createObject(jroot.getJSONArray("objects").getJSONObject(i));
             }
         }
         catch (JSONException e)
