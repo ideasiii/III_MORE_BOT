@@ -113,13 +113,12 @@ public class VoiceRecognitionHandler
         public void onResults(Bundle bundle)
         {
             Logs.showTrace("[VoiceRecognitionHandler] onResults");
-            ArrayList<String> matches = results
-                    .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+            ArrayList<String> matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
             String text = "";
             for (String result : matches)
                 text += result + "\n";
-    
-           // returnedText.setText(text);
+            
+            // returnedText.setText(text);
         }
         
         @Override
