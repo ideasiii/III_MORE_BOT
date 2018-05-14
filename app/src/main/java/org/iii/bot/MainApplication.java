@@ -5,6 +5,7 @@ import android.app.Application;
 import android.speech.tts.UtteranceProgressListener;
 
 import org.iii.module.TtsHandler;
+import org.iii.module.VoiceRecognitionHandler;
 import org.iii.more.common.Logs;
 
 /**
@@ -29,6 +30,7 @@ public class MainApplication extends Application
     }
     
     private TtsHandler ttsHandler = null;
+    private VoiceRecognitionHandler voiceRecognitionHandler = null;
     
     public MainApplication()
     {
@@ -39,7 +41,6 @@ public class MainApplication extends Application
     public void onCreate()
     {
         super.onCreate();
-        
     }
     
     public void init(final MainActivity activity)
@@ -85,11 +86,14 @@ public class MainApplication extends Application
         });
         ttsHandler.createTTS();
         
+        voiceRecognitionHandler = new VoiceRecognitionHandler();
+        voiceRecognitionHandler.initSpeechRecognizer(activity);
     }
     
     public void release()
     {
         ttsHandler.release();
+        voiceRecognitionHandler.releaseSpeechRecognizer();
         Logs.showTrace("[MainApplication] Release Resource");
     }
     
