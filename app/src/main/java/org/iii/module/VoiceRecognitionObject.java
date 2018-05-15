@@ -2,19 +2,18 @@ package org.iii.module;
 
 import android.app.Activity;
 
-import org.iii.bot.MainApplication;
 import org.iii.more.common.Logs;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by Jugo on 2018/4/24
+ * Created by Jugo on 2018/5/15
  */
-public class TtsObject extends BaseObject
+public class VoiceRecognitionObject extends BaseObject
 {
-    private String mstrText = "";
+    private boolean mbRepeat;
     
-    public TtsObject(Activity activity)
+    public VoiceRecognitionObject(Activity activity)
     {
         super(activity);
     }
@@ -24,8 +23,8 @@ public class TtsObject extends BaseObject
     {
         try
         {
-            mstrText = jsonConfig.getString("text");
-            Logs.showTrace("[TtsObject] create TTS text: " + mstrText);
+            mbRepeat = jsonConfig.getBoolean("repeat");
+            
         }
         catch (JSONException e)
         {
@@ -36,7 +35,6 @@ public class TtsObject extends BaseObject
     @Override
     protected void run()
     {
-        Logs.showTrace("[TtsObject] run TTS text: " + mstrText);
-        mainApplication.tts(mstrText, "111");
+    
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.renderscript.BaseObj;
 import android.view.ViewGroup;
 
+import org.iii.bot.MainApplication;
 import org.json.JSONObject;
 
 /**
@@ -11,16 +12,18 @@ import org.json.JSONObject;
  */
 public abstract class BaseObject
 {
-    public int x = 0;
-    public int y = 0;
-    public int width = ViewGroup.LayoutParams.MATCH_PARENT;
-    public int height = ViewGroup.LayoutParams.MATCH_PARENT;
-    protected Activity theActivity = null;
-    protected ViewGroup theViewGroup = null;
+    int x = 0;
+    int y = 0;
+    int width = ViewGroup.LayoutParams.MATCH_PARENT;
+    int height = ViewGroup.LayoutParams.MATCH_PARENT;
+    Activity theActivity = null;
+    ViewGroup theViewGroup = null;
+    MainApplication mainApplication = null;
     
-    public BaseObject(Activity activity)
+    BaseObject(Activity activity)
     {
         theActivity = activity;
+        mainApplication = (MainApplication) activity.getApplication();
     }
     
     protected abstract void create(JSONObject jsonConfig);

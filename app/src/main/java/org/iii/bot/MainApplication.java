@@ -93,7 +93,7 @@ public class MainApplication extends Application
     public void release()
     {
         ttsHandler.release();
-        voiceRecognitionHandler.releaseSpeechRecognizer();
+        voiceRecognitionHandler.release();
         Logs.showTrace("[MainApplication] Release Resource");
     }
     
@@ -101,4 +101,15 @@ public class MainApplication extends Application
     {
         ttsHandler.speack(strText, strCallback);
     }
+    
+    public void speechStart()
+    {
+        voiceRecognitionHandler.start();
+    }
+    
+    public void speechStop()
+    {
+        voiceRecognitionHandler.stop();
+    }
+    
 }
